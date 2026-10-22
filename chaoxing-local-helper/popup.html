@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>超星本地学习辅助</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <h1>超星本地学习辅助 0.3.1</h1>
+  <p class="sub">在当前超星课程页工作 · 数据保存在本机</p>
+  <label><input type="checkbox" id="enabled">开启网页移出保护及学习辅助</label>
+  <label><input type="checkbox" id="autoPlay">尝试播放新出现的视频</label>
+  <label><input type="checkbox" id="mutedFallback">有声自动播放被拦截时，尝试静音起播</label>
+  <label><input type="checkbox" id="autoNext">视频结束后自动切换下一节</label>
+  <label><input type="checkbox" id="directoryNext">优先按右侧目录顺序连续播放</label>
+  <label><input type="checkbox" id="skipQuestions">记录题目后使用明确的跳过按钮；否则尝试下一节</label>
+  <p class="hint">手动暂停仍然有效。题目不会自动选答案或提交。目录末尾、下一节锁定或无法确认章节时停下。</p>
+  <div id="status" role="status">连接中…</div>
+  <div class="row"><h2>待答记录 <span id="count"></span></h2><button id="export">导出记录</button></div>
+  <p class="hint">记录只是待办；标记已做不会改变平台成绩。最多保留最近 300 条。</p>
+  <div id="pending"></div>
+  <script src="popup.js"></script>
+</body></html>

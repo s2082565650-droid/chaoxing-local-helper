@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "超星本地学习辅助",
+  "version": "0.3.1",
+  "description": "网页移出保护、按目录连续播放，以及本地待答题目记录。",
+  "permissions": ["storage"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "超星本地学习辅助" },
+  "content_scripts": [{
+    "matches": ["https://*.chaoxing.com/*"],
+    "js": ["rules.js", "directory.js", "playback.js", "content.js"],
+    "run_at": "document_start",
+    "all_frames": true,
+    "match_origin_as_fallback": true
+  }]
+}
